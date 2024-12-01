@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1d1c1c;
+    color: #ffffff
+}
+
+header {
+    font-size: 2.5rem; /* Taille du texte */
+    color: #ffffff; /* Couleur du texte */
+    background-color: #9a3289; /* Couleur de fond du cadre */
+    padding: 20px 40px; /* Espace interne entre le texte et les bords */
+    border: 2px solid #aa4699; /* Bordure */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre pour un effet de relief */
+    text-align: center; /* Centrer le texte */
+    width: fit-content; /* Ajuste la largeur au contenu */
+    margin: 20px auto; /* Centre le cadre horizontalement et ajoute de l'espace en haut et en bas */
+    font-family: 'Arial', sans-serif; /* Police personnalisée */
+}
+
+
+h1 { 
+    font-size: 2.5rem;
+    color: #ffffff;
+    position: relative;  /* Nécessaire pour positionner le ::after */
+    text-decoration: none;  /* Pas de soulignement par défaut */
+    text-align: center;  /* Centrer le texte */
+    margin-bottom: 20px;  /* Ajoute un peu d'espace sous le titre */
+}
+
+/* Création de la ligne sous le titre */
+h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;  /* Place la ligne sous le texte */
+    width: 0;  /* Commence la ligne avec une largeur de 0 */
+    height: 3px;  /* Épaisseur de la ligne */
+    background-color: black;  /* Couleur de la ligne */
+    transition: width 1s ease;  /* Animation fluide */
+}
+
+/* Lors du survol, étendre la ligne */
+h1:hover::after {
+    width: 100%;  /* La ligne s'étend sur toute la largeur du titre */
+}
+
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.dropbtn {
+
+    padding: 10px 20px;
+    background-color: #7a0909;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+
+.menu-button {
+
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.menu-button:hover {
+
+    background-color: #eb04c6
+
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+    
+}
+
+.menu-content a {
+
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+
+}
+
+
+.menu-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
+.menu-container {
+
+    text-align: center;    /* Centrage dans le conteneur si nécessaire */
+}
+
+
+
