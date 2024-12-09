@@ -1,14 +1,12 @@
-function toggleMenu() {
-    const menu = document.getElementById("menu");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
+function toggleMenu(menuId) {
+    const menu = document.getElementById(menuId);
+    const isVisible = menu.style.display === 'block';
+    
+    // Ferme tous les menus avant d'ouvrir le bon
+    document.querySelectorAll('.menu-content').forEach(menu => {
+        menu.style.display = 'none';
+    });
+
+    // Ouvre ou ferme le menu demandé
+    menu.style.display = isVisible ? 'none' : 'block';
 }
-
-window.onclick = function(event) {
-    if (!event.target.matches('.menu-button')) {
-        const dropdowns = document.getElementsByClassName("menu-content");
-        for (let i = 0; i < dropdowns.length; i++) {
-            dropdowns[i].style.display = "none";
-        }
-    }
-};
-

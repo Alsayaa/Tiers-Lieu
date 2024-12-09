@@ -17,14 +17,24 @@
 
 <body>
 
-  <div class="menu-container">
-    <button class="menu-button" onclick="toggleMenu()">Fiche Pratique</button>
-    <div class="menu-content" id="menu">
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUJcmljayByb2xs">Mon compte</a>
-      <a href="html/FP_UE5.html">Unreal Engine</a>
-      <a href="html/FP_Blender.html">Blender</a>
-      <a href="html/FP_RPG_Maker.html">RPG Maker</a>
-      <a href="html/FP_Davinci.html">Davinci</a>
+  <div class="buttons-wrapper">
+    <div class="menu-container">
+        <button class="menu-button" onclick="toggleMenu('menu1')">Fiche Pratique</button>
+        <div class="menu-content" id="menu1">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUJcmljayByb2xs">Mon compte</a>
+            <a href="html/FP_UE5.html">Unreal Engine</a>
+            <a href="html/FP_Blender.html">Blender</a>
+            <a href="html/FP_RPG_Maker.html">RPG Maker</a>
+            <a href="html/FP_Davinci.html">Davinci</a>
+        </div>
+    </div>
+    <div class="menu-container">
+        <button class="menu-button" onclick="toggleMenu('menu2')">Jeux-sérieux</button>
+        <div class="menu-content" id="menu2">
+            <a href="https://www.example.com">Florent-Ose t'es idées</a>
+            <a href="https://www.example2.com">Merlin président</a>
+            <a href="https://www.example3.com">Promeneur du net</a>
+        </div>
     </div>
   </div>
 
