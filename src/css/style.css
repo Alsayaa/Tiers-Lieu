@@ -9,9 +9,9 @@ body {
 header {
     font-size: 2.5rem; /* Taille du texte */
     color: #ffffff; /* Couleur du texte */
-    background-color: #9a3289; /* Couleur de fond du cadre */
+    background-color: #eb04c6; /* Couleur de fond du cadre */
     padding: 20px 40px; /* Espace interne entre le texte et les bords */
-    border: 2px solid #aa4699; /* Bordure */
+    border: 2px solid #eb04c6; /* Bordure */
     border-radius: 10px; /* Coins arrondis */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre pour un effet de relief */
     text-align: center; /* Centrer le texte */
@@ -58,20 +58,12 @@ footer {
     bottom: 0;
 }
 
-.dropbtn {
-
-    padding: 10px 20px;
-    background-color: #7a0909;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    
+.menu-container {
+    position: relative;
+    text-align: center;
 }
 
 .menu-button {
-
     padding: 10px 20px;
     background-color: black;
     color: white;
@@ -82,41 +74,36 @@ footer {
 }
 
 .menu-button:hover {
-
-    background-color: #eb04c6
-
+    background-color: #eb04c6;
 }
 
 .menu-content {
     display: none;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: white;
     min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 5px;
     overflow: hidden;
-    
 }
 
 .menu-content a {
-
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-
 }
-
 
 .menu-content a:hover {
     background-color: #f1f1f1;
 }
 
-
-.menu-container {
-
-    text-align: center;    /* Centrage dans le conteneur si nécessaire */
+.menu-button:hover + .menu-content,
+.menu-button:focus + .menu-content {
+    display: block;
 }
 
 
