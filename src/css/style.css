@@ -20,6 +20,14 @@ header {
     font-family: 'Arial', sans-serif;
 }
 
+.subtitle {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-top: 5px;
+    text-align: center;
+    font-weight: normal;
+}
+
 h1 {
     font-size: 2.5rem;
     color: #ffffff;
@@ -29,31 +37,47 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Ligne sous le titre */
 h1::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 3px;
+    bottom: -5px; /* Position légèrement sous le texte */
+    width: 0; /* Départ à 0 */
+    height: 3px; /* Épaisseur de la ligne */
     background-color: black;
-    transition: width 1s ease;
+    transition: width 1s ease; /* Animation plus fluide */
 }
 
+/* Animation au survol */
 h1:hover::after {
-    width: 100%;
+    width: 100%; /* S'étend sur toute la largeur du titre */
 }
 
 footer {
-    background-color: #222;
+    background-color: #1f1e1e;
     color: white;
     text-align: center;
-    padding: 0.5rem;
+    padding: 1rem;
     position: fixed;
     width: 100%;
     bottom: 0;
 }
+
+.address {
+    position: fixed; /* Fixe l'adresse par rapport à la fenêtre */
+    bottom: 10px; /* Positionne à 10px du bas */
+    right: 10px; /* Positionne à 10px de la droite */
+    background-color: #1f1e1e;; /* Couleur de fond semi-transparente pour contraste */
+    color: white; /* Texte blanc */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px #1f1e1e;
+    font-size: 14px;
+    line-height: 1.5;
+    z-index: 100; /* Assure que l'adresse reste au-dessus d'autres éléments */
+    text-align: right; /* Aligne le texte à droite */
+}
+
 
 /* Conteneur des boutons */
 .buttons-wrapper {
@@ -127,3 +151,20 @@ margin-left: 70%;
 margin-top: 5%
 
 }
+
+.social-links a img {
+    width: 40px; /* Taille par défaut des icônes */
+    height: 40px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Animation fluide */
+    opacity: 0.8; /* Icônes légèrement transparentes */
+}
+
+.social-links a:hover img {
+    transform: scale(1.2); /* Grossissement au survol */
+    opacity: 1; /* Rétablit la pleine opacité */
+}
+
+.social-links a:hover {
+    filter: drop-shadow(0 0 5px #eb04c6); /* Ajoute un léger effet lumineux */
+}
+
