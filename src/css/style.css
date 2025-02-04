@@ -159,3 +159,28 @@ footer {
     padding: 10px;
 }
 
+
+.address {
+    position: fixed; /* Fixe l'adresse en bas à gauche */
+    bottom: 10px; /* Distance depuis le bas */
+    left: 10px; /* Distance depuis la gauche */
+    background-color: #2c2c2c; /* Fond cohérent avec le design */
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 2px solid #eb04c6; /* Respecte le style général */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    width: max-content;
+}
+
+.address p {
+    margin: 3px 0; /* Espacement réduit pour plus de compacité */
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+
+
