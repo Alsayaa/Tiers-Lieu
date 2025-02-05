@@ -84,11 +84,46 @@ header p {
 
 /* Pied de page */
 footer {
-    background-color: #1d1c1c;
-    color: #ffffff;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 14px;
+    background-color: #1f1e1e;
+    color: white;
+    padding: 1rem;
     width: 100%;
-    margin-top: auto;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre tous les éléments horizontalement */
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centre horizontalement */
+    width: 100%;
+    gap: 20px;
+}
+
+.image-footer img {
+    width: 100px; /* Ajuste la taille de l’image */
+    height: auto;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center; /* Assure le centrage horizontal */
+    align-items: center;
+    margin-right: 7%;
+    flex: 1;
+}
+
+.social-links a img {
+    width: 40px; /* Taille des icônes */
+    height: 40px;
 }
