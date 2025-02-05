@@ -1,3 +1,4 @@
+/* Styles généraux */
 body {
     background-color: #1d1c1c;
     font-family: Arial, sans-serif;
@@ -9,76 +10,79 @@ body {
     min-height: 100vh;
 }
 
-main {
-    flex: 1;
-}
-
-.header {
-    background-color: #1d1c1c;
+header {
+    background-color: #eb04c6;
     padding: 20px;
     text-align: center;
+    color: white;
 }
 
-.header-box {
-    background-color: #eb04c6;
-    display: inline-block;
-    padding: 20px 40px;
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Section des fiches */
+.fiches {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.fiche {
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.header-box h1 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: white;
-    position: relative;
-    cursor: pointer;
-}
-
-.header-box h1::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background-color: black;
-    transition: width 0.3s ease-in-out;
-}
-
-.header-box h1:hover::after {
-    width: 100%;
-}
-
-.fiches {
-    text-align: center;
     padding: 20px;
+    text-align: center;
+    width: 300px;
 }
 
-.fiche-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+.fiche img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.fiche h2 {
+    color: #eb04c6;
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.fiche p {
+    font-size: 1rem;
+    color: #ffffff;
+    opacity: 0.8;
+    margin-bottom: 15px;
 }
 
 .fiche-btn {
     background: #eb04c6;
     color: white;
     text-decoration: none;
-    padding: 12px;
+    padding: 10px 20px;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 1rem;
     display: inline-block;
-    width: 80%;
-    max-width: 300px;
-    text-align: center;
+    transition: background 0.3s;
 }
 
 .fiche-btn:hover {
     background: #d103b2;
 }
 
+/* Pied de page */
 footer {
     background-color: #1d1c1c;
     color: #ffffff;
