@@ -35,22 +35,24 @@ h1 {
     text-decoration: none;
     text-align: center;
     margin-bottom: 20px;
+    display: inline-block; /* Pour que la largeur du h1 corresponde au texte */
 }
 
 h1::after {
     content: "";
     position: absolute;
-    left: 0;
-    bottom: -5px; /* Position légèrement sous le texte */
+    left: 50%; /* Centre la ligne */
+    bottom: -5px; /* Position sous le texte */
     width: 0; /* Départ à 0 */
     height: 3px; /* Épaisseur de la ligne */
     background-color: black;
-    transition: width 1s ease; /* Animation plus fluide */
+    transition: width 0.5s ease-in-out; /* Animation fluide */
+    transform: translateX(-50%); /* Ajuste pour centrer correctement */
 }
 
 /* Animation au survol */
 h1:hover::after {
-    width: 50%; /* S'étend sur toute la largeur du titre */
+    width: 100%; /* La ligne suit la largeur du titre */
 }
 
 footer {
