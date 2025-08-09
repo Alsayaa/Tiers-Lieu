@@ -1,0 +1,235 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1d1c1c;
+    color: #ffffff;
+}
+
+header {
+    font-size: 2.5rem;
+    color: #ffffff;
+    background-color: #eb04c6;
+    padding: 20px 40px;
+    border: 2px solid #eb04c6;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: fit-content;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-top: 5px;
+    text-align: center;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 20px;
+    display: inline-block; /* Pour que la largeur du h1 corresponde au texte */
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    left: 50%; /* Centre la ligne */
+    bottom: -5px; /* Position sous le texte */
+    width: 0; /* Départ à 0 */
+    height: 3px; /* Épaisseur de la ligne */
+    background-color: black;
+    transition: width 0.5s ease-in-out; /* Animation fluide */
+    transform: translateX(-50%); /* Ajuste pour centrer correctement */
+}
+
+/* Animation au survol */
+h1:hover::after {
+    width: 100%; /* La ligne suit la largeur du titre */
+}
+
+footer {
+    background-color: #1f1e1e;
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre tous les éléments horizontalement */
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centre horizontalement */
+    width: 100%;
+    gap: 20px;
+}
+
+.image-footer img {
+    width: 100px; /* Ajuste la taille de l’image */
+    height: auto;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center; /* Assure le centrage horizontal */
+    align-items: center;
+    margin-right: 7%;
+    flex: 1;
+}
+
+.social-links a {
+    display: inline-block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.2) rotate(5deg); /* Agrandissement + légère rotation */
+    filter: brightness(1.3); /* Éclaircit légèrement l’icône */
+    box-shadow: 0 0 15px #eb04c6; /* Lueur rose */
+}
+
+.social-links a img {
+    width: 40px; /* Taille des icônes */
+    height: 40px;
+}
+
+
+.buttons-wrapper {
+    display: flex;
+    justify-content: center; /* Aligne les menus horizontalement */
+    gap: 20px; /* Espacement entre les menus */
+    margin-top: 20px;
+}
+
+.menu-container {
+    position: relative; /* Nécessaire pour placer les menus déroulants */
+}
+
+.menu-button {
+    background-color: #eb04c6;
+    color: #ffffff;
+    border: 2px solid #eb04c6;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.menu-button:hover {
+    background-color: #d003b0;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.menu-content {
+    display: none;
+    background-color: #2c2c2c;
+    border: 2px solid #eb04c6;
+    border-radius: 10px;
+    position: absolute; /* Positionne le menu déroulant par rapport au bouton */
+    top: 100%; /* Place le menu directement en dessous du bouton */
+    left: 0; /* Aligne le menu avec le bouton */
+    margin-top: 10px;
+    padding: 10px;
+    width: 250px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.menu-content a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+
+.menu-content a:hover {
+    background-color: #eb04c6;
+}
+
+.menu-content a:active {
+    background-color: #d003b0;
+}
+
+.menu-container.active .menu-content {
+    display: block;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between; /* Espace entre les éléments */
+    align-items: flex-start; /* Aligne les contenus en haut */
+    margin: 20px;
+    gap: 20px; /* Espacement entre le texte et la vidéo */
+}
+
+.text-content {
+    flex: 1; /* Prend tout l'espace restant */
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    background-color: #1d1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.video-content {
+    flex-shrink: 0; /* Empêche la vidéo de rétrécir */
+    width: 400px; /* Largeur fixe pour la vidéo */
+    background-color: #1d1c1c;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+
+.address {
+    position: fixed; /* Fixe l'adresse en bas à gauche */
+    bottom: 10px; /* Distance depuis le bas */
+    left: 10px; /* Distance depuis la gauche */
+    background-color: #2c2c2c; /* Fond cohérent avec le design */
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 2px solid #eb04c6; /* Respecte le style général */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    width: max-content;
+}
+
+.address p {
+    margin: 3px 0; /* Espacement réduit pour plus de compacité */
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+
+
+
